@@ -1,0 +1,176 @@
+#page-create-pontoHistorico {
+  display: flex;
+}
+
+
+
+#page-create-pontoHistorico main {
+  flex: 1;
+}
+
+form.create-pontoHistorico-form {
+  width: 700px;
+  margin: 64px auto;
+
+  background: #FFFFFF;
+  border: 1px solid #D3E2E5;
+  border-radius: 20px;
+
+  padding: 64px 80px;
+
+  overflow: hidden;
+}
+
+form.create-pontoHistorico-form .leaflet-container {
+  margin-bottom: 40px;
+  border: 1px solid #d3d2d5;
+  border-radius: 20px;
+}
+
+form.create-pontoHistorico-form fieldset {
+  border: 0;
+}
+
+form.create-pontoHistorico-form fieldset + fieldset {
+  margin-top: 80px;
+}
+
+form.create-pontoHistorico-form fieldset legend {
+  width: 100%;
+
+  font-size: 32px;
+  line-height: 34px;
+  color:#57524c;
+  font-weight: 700;
+
+  border-bottom: 1px solid #9c9286;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+}
+
+form.create-pontoHistorico-form .input-block + .input-block {
+  margin-top: 24px;
+}
+
+form.create-pontoHistorico-form .input-block label {
+  display: flex;
+  color:  #57524c;
+  margin-bottom: 8px;
+  line-height: 24px;
+}
+
+form.create-pontoHistorico-form .input-block label span {
+  font-size: 14px;
+  color:#57524c;
+  margin-left: 24px;
+  line-height: 24px;
+}
+
+form.create-pontoHistorico-form .input-block input,
+form.create-pontoHistorico-form .input-block textarea {
+  width: 100%;
+  background: #F5F8FA;
+  border: 1px solid #D3E2E5;
+  border-radius: 20px;
+  outline: none;
+  color:#997f5c;
+}
+
+form.create-pontoHistorico-form .input-block input {
+  height: 64px;
+  padding: 0 16px;
+}
+
+form.create-pontoHistorico-form .input-block textarea {
+  min-height: 120px;
+  max-height: 240px;
+  resize: vertical;
+  padding: 16px;
+  line-height: 28px;
+}
+
+form.create-pontoHistorico-form .input-block .images-container .new-image {
+  width: 96px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form.create-pontoHistorico-form .input-block .images-container img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+form.create-pontoHistorico-form .input-block input[type=file] {
+  display: none;
+  visibility: hidden;
+}
+form.create-pontoHistorico-form .input-block .new-image {
+  width: 100%;
+  height: 64px;
+  background: #faf8f5;
+  border: 1px dashed #f0d396;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+form.create-pontoHistorico-form .input-block .button-select {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+form.create-pontoHistorico-form .input-block .button-select button {
+  height: 64px;
+  background:  #faf8f5;
+  border: 1px solid #e5e1d3;
+  color:#9b690c;
+  cursor: pointer;
+}
+
+form.create-pontoHistorico-form .input-block .button-select button.active {
+  background: #faf27e;
+  border: 1px solid #c6f59b;
+  color: #7e6808;
+}
+
+form.create-pontoHistorico-form .input-block .button-select button:first-child {
+  border-radius: 20px 0px 0px 20px;
+}
+
+form.create-pontoHistorico-form .input-block .button-select button:last-child {
+  border-radius: 0 20px 20px 0;
+  border-left: 0;
+}
+
+form.create-pontoHistorico-form button.confirm-button {
+  margin-top: 64px;
+
+  width: 100%;
+  height: 64px;
+  border: 0;
+  cursor: pointer;
+  background: #dc893c;
+  border-radius: 20px;
+  color: #FFFFFF;
+  font-weight: 800;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+form.create-pontoHistorico-form button.confirm-button svg {
+  margin-right: 16px;
+}
+
+form.create-pontoHistorico-form button.confirm-button:hover {
+  background: #cf8036;
+}

@@ -1,0 +1,21 @@
+// Rota = Conjunto
+// Recurso = Usuário
+// Métodos HTTP = GET, POST, PUT, DELETE
+// Parâmetros
+
+// GET = Buscar informação
+// POST = Criar informação
+// PUT = Editar informação
+// DELETE = Apagar informação
+
+// Parâmetros:
+
+// Query Params = http://localhost:3333/user?search=diego
+// Route Params: http://localhost:3333/users/1 (identificar um recurso por rota)
+// Body: http://localhost:3333/users
+
+// console.log(req.query)
+// console.log(req.params)
+// console.log(req.body)
+
+
