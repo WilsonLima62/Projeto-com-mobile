@@ -55,9 +55,9 @@ export default function PontoData() {
       } as any);
     });
 
-    await api.post("pontos", data);
+    await api.post("/pontosHistoricos", data);
 
-    navigation.navigate("PontosMap");
+    navigation.navigate("PontoMap");
   }
 
   async function handleSelectImage() {

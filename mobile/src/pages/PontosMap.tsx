@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { Feather } from "@expo/vector-icons";
 import mapMarker from "../images/map-marker.png";
 import MapView, { Marker, PROVIDER_GOOGLE, Callout } from "react-native-maps";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
-import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import { RectButton } from "react-native-gesture-handler";
 import api from "../services/api";
 
@@ -18,11 +18,18 @@ export default function PontosMap() {
   const navigation = useNavigation();
   const [pontos, setPontos] = useState<PontoItem[]>([]);
 
-  useFocusEffect(() => {
-    api.get("/pontos").then((response) => {
-      setPontos(response.data);
+  const getPontos = useCallback(async()=>{
+    const response = await api.get('/pontosHistoricos');
+    setPontos(response.data);
+  },[]);
+
+  useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', () => {
+      getPontos();
     });
-  });
+
+    return unsubscribe;
+  }, [getPontos, navigation]);
 
   function handleNavigateToPontoDetails(id: number) {
     navigation.navigate("PontoDetails", { id });

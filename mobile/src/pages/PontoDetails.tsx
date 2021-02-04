@@ -44,7 +44,7 @@ export default function PontoDetails() {
 
   useEffect(() => {
     api
-      .get(`/pontos/${params.id}`)
+      .get(`/pontosHistoricos/${params.id}`)
       .then((response) => setPonto(response.data));
   }, [params.id]);
 

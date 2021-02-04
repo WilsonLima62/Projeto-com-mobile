@@ -9,7 +9,7 @@ import pontosHistoricos from '../models/pontosHistoricosModel'
 export default {
 
     async show(req: Request, res: Response) {
-
+        console.log('pontosHistoricosController.show');
         const { id } = req.params
         const pontosHistoricosRepository = getRepository(pontosHistoricos)
 
@@ -21,6 +21,7 @@ export default {
     },
 
     async index(req: Request, res: Response) {
+        console.log('pontosHistricosControler.index');
         const pontosHistoricosRepository = getRepository(pontoHistorico)
 
         //retorna o  ponto Historico com a imagem
@@ -31,7 +32,7 @@ export default {
         return res.json(pontosHistoricosView.renderMany(pontosHistoricos))
     },
     async create(req: Request, res: Response) {
-
+        console.log('pontosHistoricosController.create');
         const {
             name,
             latitude,
